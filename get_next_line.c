@@ -6,7 +6,7 @@
 /*   By: ncouton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 14:00:10 by ncouton           #+#    #+#             */
-/*   Updated: 2024/03/19 14:43:23 by ncouton          ###   ########.fr       */
+/*   Updated: 2024/03/19 19:47:45 by ncouton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_read_line(int fd, char *line)
 {
 	char	*buff;
-	int	byte_readed;
+	int		byte_readed;
 
 	buff = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buff)
@@ -37,7 +37,7 @@ char	*ft_read_line(int fd, char *line)
 char	*get_next_line(int fd)
 {
 	static char	*line;
-	char	*buff;
+	char		*buff;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);

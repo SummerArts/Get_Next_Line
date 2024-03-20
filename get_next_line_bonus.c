@@ -6,16 +6,16 @@
 /*   By: ncouton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:21:17 by ncouton           #+#    #+#             */
-/*   Updated: 2024/03/19 16:28:19 by ncouton          ###   ########.fr       */
+/*   Updated: 2024/03/20 16:10:38 by ncouton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_read_line(int fd, char *line)
 {
 	char	*buff;
-	int	byte_readed;
+	int		byte_readed;
 
 	buff = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buff)
@@ -37,7 +37,7 @@ char	*ft_read_line(int fd, char *line)
 char	*get_next_line(int fd)
 {
 	static char	*line[1024];
-	char	*buff;
+	char		*buff;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
